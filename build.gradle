@@ -12,6 +12,9 @@ sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+        google()
+        mavenCentral()  //add this line
+        jcenter()
 }
 
 dependencies {
@@ -19,6 +22,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	classpath 'com.android.tools.build:gradle:3.2.1'
 }
 
 test {
