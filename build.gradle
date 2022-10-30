@@ -10,10 +10,16 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
-repositories {
-	maven { url "https://maven.google.com" }
+buildscript {
+    repositories {
         google()
-        jcenter()
+        maven { url "https://maven.google.com" }
+	jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.0'
+        classpath 'com.google.gms:google-services:4.2.0'
+    }
 }
 
 dependencies {
@@ -21,7 +27,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	classpath 'com.android.tools.build:gradle:3.2.1'
 }
 
 test {
